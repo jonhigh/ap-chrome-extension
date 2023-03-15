@@ -1,14 +1,14 @@
 function saveOptions(e) {
  browser.storage.local.set({
-  notion_api_key: document.querySelector("#notion_api_key").value
+  agileplace_api_key: document.querySelector("#agileplace_api_key").value
  });
  e.preventDefault();
 }
 
 function restoreOptions() {
- let gettingItem = browser.storage.local.get('notion_api_key');
+ let gettingItem = browser.storage.local.get('agileplace_api_key');
  gettingItem.then((res) => {
-  document.querySelector("#notion_api_key").value = res.notion_api_key || '';
+  document.querySelector("#agileplace_api_key").value = res.agileplace_api_key || '';
  });
 }
 
